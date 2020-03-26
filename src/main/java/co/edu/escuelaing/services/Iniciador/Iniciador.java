@@ -17,7 +17,7 @@ public class Iniciador
     public static void main(String[] args) {
         port(Puerto.getPort());
         get("/", (req, res) -> PaginaInicial(req, res));
-        get("/results", (req, res) -> resultsPage(req, res));
+        get("/results", (req, res) -> PaginaResultado(req, res));
     }
     
     public static Integer square(Integer i){
