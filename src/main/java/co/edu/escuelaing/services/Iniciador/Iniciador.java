@@ -3,7 +3,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
-
 import co.edu.escuelaing.services.Puerto.Puerto;
 import spark.Request;
 import spark.Response;
@@ -19,14 +18,9 @@ public class Iniciador
         get("/", (req, res) -> PaginaInicial(req, res));
         get("/results", (req, res) -> PaginaResultado(req, res));
     }
-    
-    public static Integer square(Integer i){
-        return i*i;
-    }
-    
+
      private static String PaginaInicial(Request req, Response res) {
-        String pageContent
-                = "<!DOCTYPE html>"
+        String pageContent = "<!DOCTYPE html>"
                 + "<html>"
                 +"<head>"
                 +"<link href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" rel=\"stylesheet\"" 
@@ -42,7 +36,7 @@ public class Iniciador
                 + "  <button class= \"btn btn-outline-primary\" type=\"submit\">Calcular</button>"
                 + "</form>"
                 +" <br>"
-                //+ "<p><i>If you click the \"Calculate\" button, the form-data will be sent to a page called \"/results\".</i></p>"
+                + "<p><i>If you click the \"Calculate\" button, the form-data will be sent to a page called \"/results\".</i></p>"
                 + "</body>"
                 + "</html>";
         return pageContent;
