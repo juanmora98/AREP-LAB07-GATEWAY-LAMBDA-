@@ -10,7 +10,7 @@ Laboratorio 07 de la materia Arquitecturas empresariales dictada en la Escuela C
 # Descripción
 Laboratorio realizado con la intención de que los estudiantes se familiaricen con los distintos servicios presentados por AWS, y asi logren hacer uso de estos en el proceso de tener una pagina web en este y que utilizando servicios de Lambda de AWS puedan desarrollar procesos haciendo uso de este. 
 
-En este laboratorio se utilizaran los siguientes servicios: EC2, AWS wateway y AWS Lambda.
+En este laboratorio se utilizaran los siguientes servicios: EC2, AWS gateway y AWS Lambda.
 
 # Como Iniciar
  # - Prerequisitos
