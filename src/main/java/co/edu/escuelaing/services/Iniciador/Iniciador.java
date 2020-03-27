@@ -36,7 +36,6 @@ public class Iniciador
                 + "  <button class= \"btn btn-outline-primary\" type=\"submit\">Calcular</button>"
                 + "</form>"
                 +" <br>"
-                + "<p><i>If you click the \"Calculate\" button, the form-data will be sent to a page called \"/results\".</i></p>"
                 + "</body>"
                 + "</html>";
         return pageContent;
