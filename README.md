@@ -11,7 +11,7 @@ Laboratorio 07 de la materia Arquitecturas empresariales dictada en la Escuela C
 
 Laboratorio realizado con la intención de que los estudiantes se familiaricen con los distintos servicios presentados por AWS, y asi logren hacer uso de estos en el proceso de tener una pagina web en este y tenga asi una base de datos establecida con estos servicios. 
 
-En este laboratorio se utilizaran los siguientes servicios: EC2, S3, VPC y RDS.
+En este laboratorio se utilizaran los siguientes servicios: EC2, AWS wateway y AWS Lambda.
 
 # Como Iniciar
  # - Prerequisitos
@@ -21,7 +21,7 @@ En este laboratorio se utilizaran los siguientes servicios: EC2, S3, VPC y RDS.
    * [java]
   
 # Diseño
-El pdf añadido de nombre [Lab6](https://github.com/juanmora98/AREP-Laboratorio06/blob/master/Recursos/lab6.pdf) se encuentra el diseño del proyecto.
+El pdf añadido de nombre [Lab7](https://github.com/juanmora98/AREP-Laboratorio06/blob/master/Recursos/lab6.pdf) se encuentra el diseño del proyecto.
 
 # JavaDoc
 [Documentacion](https://github.com/juanmora98/AREP-LAB07-GATEWAY-LAMBDA-/tree/master/Recursos/Documentacion/apidocs) al darle click, se abrira la carpeta donde se encuentra los archivos generados por el javadocs.
