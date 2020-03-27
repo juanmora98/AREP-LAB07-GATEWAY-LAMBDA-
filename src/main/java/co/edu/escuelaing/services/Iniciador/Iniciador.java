@@ -6,20 +6,29 @@ import java.net.URL;
 import co.edu.escuelaing.services.Puerto.Puerto;
 import spark.Request;
 import spark.Response;
-import spark.Route;
 import static spark.Spark.*;
 
 
 public class Iniciador
 {
 
+    /**
+     * Metodo inicial que se encargara de correr la asignacion del puerto y asi mismo los llamados get de las paginas especificas
+     * @param args
+     */
     public static void main(String[] args) {
         port(Puerto.getPort());
         get("/", (req, res) -> PaginaInicial(req, res));
         get("/results", (req, res) -> PaginaResultado(req, res));
     }
 
-     private static String PaginaInicial(Request req, Response res) {
+    /**
+     * Metodo encargado de generar la pagina inicial la cual se encargara de solicitarle un numero al usuario
+     * @param req
+     * @param res
+     * @return
+     */
+    private static String PaginaInicial(Request req, Response res) {
         String pageContent = "<!DOCTYPE html>"
                 + "<html>"
                 +"<head>"
@@ -40,11 +49,19 @@ public class Iniciador
                 + "</html>";
         return pageContent;
     }
+
+    /**
+     * Metodo encargado de generar la pagina de respuesta al usuario esta esta conectada directamente con el lambda de AWS para realizar la operacion
+     * @param req
+     * @param res
+     * @return
+     * @throws Exception
+     */
     private static String PaginaResultado(Request req, Response res) throws Exception {
         String number=(req.queryParams("data"));
-         URL pagina=new URL("https://i119l4omrg.execute-api.us-east-1.amazonaws.com/alfa?value="+number);
+         URL lambda=new URL("https://i119l4omrg.execute-api.us-east-1.amazonaws.com/alfa?value="+number);
         String contenido="";
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(pagina.openStream()))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(lambda.openStream()))) {
 			String inputLine = null;
 			while ((inputLine = reader.readLine()) != null) {
 				contenido+=inputLine;
